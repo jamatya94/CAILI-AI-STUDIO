@@ -29,14 +29,21 @@
           </div>
         </a>
 
-        <nav class="site-nav" aria-label="Primary navigation">
-          <a href="#about">About</a>
-          <a href="#workflows">Workflows</a>
-          <a href="#use-cases">Use Cases</a>
-          <a href="#ethics">Responsible AI</a>
-        </nav>
-
         <div class="header-actions">
+          <button
+            class="header-menu-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="site-panel"
+            aria-label="Open section navigation"
+          >
+            <span>Explore</span>
+            <span class="header-menu-icon" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </button>
           <div class="header-partnership" aria-label="Powered by BoodleBox">
             <span class="partner-badge-label">Powered by</span>
             <!-- BoodleBox header logo from /public/logo/boodlebox-logo-dark.png -->
@@ -58,6 +65,65 @@
         </div>
       </div>
     </header>
+
+    <div class="site-panel-backdrop" hidden data-nav-close></div>
+
+    <aside
+      class="site-panel"
+      id="site-panel"
+      aria-label="Site sections"
+      aria-hidden="true"
+    >
+      <div class="site-panel-inner">
+        <div class="site-panel-top">
+          <div>
+            <p class="site-panel-eyebrow">Explore the Studio</p>
+            <h2>Jump into the CAILI story.</h2>
+          </div>
+          <button
+            class="site-panel-close"
+            type="button"
+            data-nav-close
+            aria-label="Close section navigation"
+          >
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
+        <p class="site-panel-copy">
+          Move through the mission, workflows, examples, and responsible AI
+          guidance without crowding the header.
+        </p>
+
+        <nav class="site-panel-nav" aria-label="Section navigation">
+          <a class="site-panel-link" href="#about" data-nav-close>
+            <span class="site-panel-link-label">About</span>
+            <span class="site-panel-link-copy">
+              See how CAILI frames AI learning across UBalt.
+            </span>
+          </a>
+          <a class="site-panel-link" href="#workflows" data-nav-close>
+            <span class="site-panel-link-label">Workflows</span>
+            <span class="site-panel-link-copy">
+              Explore the MBA and BoodleBox pathways on the page.
+            </span>
+          </a>
+          <a class="site-panel-link" href="#use-cases" data-nav-close>
+            <span class="site-panel-link-label">Use Cases</span>
+            <span class="site-panel-link-copy">
+              Browse example prompts for business, law, and public affairs.
+            </span>
+          </a>
+          <a class="site-panel-link" href="#ethics" data-nav-close>
+            <span class="site-panel-link-label">Responsible AI</span>
+            <span class="site-panel-link-copy">
+              Review the fairness, integrity, transparency, and community lens.
+            </span>
+          </a>
+        </nav>
+      </div>
+    </aside>
 
     <main id="main-content">
       <section class="hero section reveal-section">
@@ -909,11 +975,39 @@
           <p class="footer-mark">CAILI AI Studio</p>
           <p class="footer-copy">
             A demo concept for responsible AI adoption at the University of
-            Baltimore across Merrick, the School of Law, and the College of
-            Public Affairs.
+            Baltimore across Merrick School of Business, the School of Law,
+            and the College of Public Affairs.
           </p>
         </div>
-        <p class="footer-credit">Programmed for CAILI AI Studio by Jenish Amatya.</p>
+        <div class="footer-credit">
+          <span class="footer-credit-text">Programmed for CAILI AI Studio by Jenish Amatya.</span>
+          <div class="footer-socials" aria-label="Jenish Amatya social links">
+            <a
+              class="footer-social-link"
+              href="https://github.com/jamatya94"
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="Jenish Amatya on GitHub"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M12 2C6.48 2 2 6.58 2 12.22c0 4.5 2.87 8.31 6.84 9.66.5.09.68-.22.68-.49 0-.24-.01-1.04-.01-1.89-2.78.62-3.37-1.21-3.37-1.21-.45-1.19-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.9 1.58 2.35 1.12 2.92.86.09-.67.35-1.12.63-1.38-2.22-.26-4.55-1.14-4.55-5.09 0-1.13.39-2.05 1.03-2.77-.1-.26-.45-1.31.1-2.73 0 0 .84-.27 2.75 1.06A9.3 9.3 0 0 1 12 6.84c.85 0 1.71.12 2.51.37 1.91-1.33 2.75-1.06 2.75-1.06.55 1.42.2 2.47.1 2.73.64.72 1.03 1.64 1.03 2.77 0 3.96-2.34 4.83-4.57 5.08.36.32.69.95.69 1.93 0 1.4-.01 2.53-.01 2.87 0 .27.18.59.69.49A10.25 10.25 0 0 0 22 12.22C22 6.58 17.52 2 12 2Z" fill="currentColor"/>
+              </svg>
+              <span>GitHub</span>
+            </a>
+            <a
+              class="footer-social-link"
+              href="https://www.linkedin.com/in/jenish-amatya/"
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="Jenish Amatya on LinkedIn"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M6.94 8.5A1.56 1.56 0 1 1 6.9 5.38a1.56 1.56 0 0 1 .04 3.12ZM5.5 9.84h2.83V19H5.5V9.84Zm4.6 0h2.71v1.25h.04c.38-.71 1.3-1.46 2.67-1.46 2.86 0 3.39 1.88 3.39 4.33V19h-2.82v-4.47c0-1.07-.02-2.45-1.49-2.45-1.49 0-1.72 1.16-1.72 2.37V19H10.1V9.84Z" fill="currentColor"/>
+              </svg>
+              <span>LinkedIn</span>
+            </a>
+          </div>
+        </div>
       </div>
 
       <div class="container footer-meta">
@@ -926,6 +1020,58 @@
     </footer>
 
     <script>
+      const navToggleButton = document.querySelector(".header-menu-toggle");
+      const navPanel = document.getElementById("site-panel");
+      const navCloseTargets = document.querySelectorAll("[data-nav-close]");
+      const navBackdrop = document.querySelector(".site-panel-backdrop");
+      let navHideTimer = 0;
+
+      const setNavOpen = (isOpen) => {
+        if (!navToggleButton || !navPanel || !navBackdrop) {
+          return;
+        }
+
+        window.clearTimeout(navHideTimer);
+        navToggleButton.setAttribute("aria-expanded", String(isOpen));
+        navPanel.setAttribute("aria-hidden", String(!isOpen));
+        navPanel.classList.toggle("is-open", isOpen);
+        document.body.classList.toggle("is-nav-open", isOpen);
+
+        if (isOpen) {
+          navBackdrop.hidden = false;
+          window.requestAnimationFrame(() => {
+            navBackdrop.classList.add("is-visible");
+          });
+          return;
+        }
+
+        navBackdrop.classList.remove("is-visible");
+        navHideTimer = window.setTimeout(() => {
+          if (navPanel.getAttribute("aria-hidden") === "true") {
+            navBackdrop.hidden = true;
+          }
+        }, 360);
+      };
+
+      if (navToggleButton && navPanel && navBackdrop) {
+        navToggleButton.addEventListener("click", () => {
+          const isOpen = navToggleButton.getAttribute("aria-expanded") === "true";
+          setNavOpen(!isOpen);
+        });
+
+        navCloseTargets.forEach((target) => {
+          target.addEventListener("click", () => {
+            setNavOpen(false);
+          });
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape") {
+            setNavOpen(false);
+          }
+        });
+      }
+
       const filterButtons = document.querySelectorAll(".filter-button");
       const useCaseCards = document.querySelectorAll(".use-case-card");
 
