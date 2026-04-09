@@ -2070,6 +2070,129 @@ button:focus-visible {
   }
 }
 
+@media (max-width: 1024px) {
+  .section {
+    padding: 4.75rem 0;
+  }
+
+  .site-header {
+    padding: 0.9rem 0;
+  }
+
+  .header-inner {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .brand,
+  .header-actions {
+    width: 100%;
+  }
+
+  .brand {
+    gap: 0.8rem;
+  }
+
+  .brand-logo {
+    width: min(20rem, 54vw);
+  }
+
+  .brand-copy,
+  .header-actions > *,
+  .feature-panel > *,
+  .cta-card > *,
+  .accelerator-banner > *,
+  .footer-main > * {
+    min-width: 0;
+  }
+
+  .header-actions {
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.85rem;
+  }
+
+  .header-menu-toggle {
+    flex: 1 1 auto;
+    justify-content: space-between;
+    margin-left: 0;
+  }
+
+  .header-partnership {
+    flex: 0 1 auto;
+    max-width: 100%;
+  }
+
+  .hero {
+    padding: 5.4rem 0 3.85rem;
+  }
+
+  #workflows.section {
+    padding-top: 3.6rem;
+  }
+
+  .hero-copy {
+    margin-top: 1.25rem;
+    font-size: 1.05rem;
+  }
+
+  .hero-note {
+    font-size: 1rem;
+  }
+
+  .hero-highlights {
+    margin-top: 2.4rem;
+  }
+
+  .feature-stack {
+    gap: 1.5rem;
+  }
+
+  .feature-panel,
+  .ethics-panel,
+  .cta-card,
+  .accelerator-banner {
+    gap: 1.5rem;
+    padding: 1.65rem;
+  }
+
+  .split-heading,
+  .section-heading {
+    width: min(100%, 44rem);
+    margin-bottom: 1.8rem;
+  }
+
+  .highlight-card,
+  .value-card,
+  .use-case-card,
+  .principle-card,
+  .ethics-card {
+    padding: 1.3rem;
+  }
+
+  .filter-button,
+  .footer-social-link {
+    min-height: 3rem;
+  }
+
+  .ethics-visual {
+    padding: 1.35rem;
+  }
+
+  .ethics-visual-layout {
+    gap: 1.25rem;
+  }
+
+  .ethics-orbit {
+    width: min(100%, 20rem);
+  }
+
+  .footer-socials {
+    flex-wrap: wrap;
+  }
+}
+
 @media (max-width: 840px) {
   .site-panel {
     width: min(24rem, 100vw);
@@ -2117,51 +2240,169 @@ button:focus-visible {
   }
 }
 
-@media (max-width: 680px) {
-  .section {
-    padding: 4rem 0;
+@media (max-width: 768px) {
+  .site-header .container,
+  .section > .container,
+  .site-footer .container {
+    padding-inline: clamp(1rem, 4vw, 1.5rem);
   }
 
-  .site-header {
-    padding: 0.8rem 0;
+  .site-panel {
+    width: 100vw;
+    padding: 0.75rem;
   }
 
-  .header-inner,
-  .header-actions {
-    flex-wrap: wrap;
+  .site-panel-inner {
+    padding: 1.15rem;
   }
 
-  .brand {
-    width: 100%;
+  .site-panel-top h2 {
+    font-size: clamp(1.45rem, 8vw, 1.9rem);
   }
 
-  .brand-copy {
-    display: flex;
-  }
-
-  .brand-logo {
-    width: min(18rem, 76vw);
+  .site-panel-copy {
+    max-width: none;
   }
 
   .header-actions {
-    width: 100%;
-    justify-content: space-between;
-    gap: 0.75rem;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "menu link"
+      "partner partner";
+    align-items: center;
   }
 
-  .hero {
-    padding-top: 5.2rem;
+  .header-menu-toggle,
+  .header-link {
+    min-height: 3rem;
   }
 
   .header-menu-toggle {
-    margin-left: auto;
+    grid-area: menu;
+  }
+
+  .header-link {
+    grid-area: link;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: end;
+    padding: 0.75rem 1rem;
+    border: 1px solid rgba(22, 22, 22, 0.08);
+    border-radius: var(--radius-pill);
+    background: rgba(255, 255, 255, 0.62);
   }
 
   .header-partnership {
-    flex: 1 1 100%;
+    grid-area: partner;
     justify-content: center;
   }
 
+  .hero {
+    padding: 4.75rem 0 3.15rem;
+  }
+
+  #workflows.section {
+    padding-top: 3rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(3rem, 12vw, 4.25rem);
+    line-height: 0.95;
+  }
+
+  .hero .section-label {
+    padding: 0.65rem 0.9rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.11em;
+  }
+
+  .hero-actions,
+  .cta-actions {
+    gap: 0.75rem;
+  }
+
+  .feature-copy h2,
+  .ethics-intro h2,
+  .cta-card h2,
+  .section-heading h2,
+  .split-heading h2,
+  .accelerator-banner h2 {
+    font-size: clamp(2.15rem, 8vw, 3rem);
+  }
+
+  .feature-list li {
+    gap: 0.75rem;
+  }
+
+  .browser-topbar {
+    padding: 0.75rem 0.85rem;
+  }
+
+  .browser-topbar p {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .analytics-layout,
+  .chat-layout {
+    min-height: auto;
+  }
+
+  .analytics-sidebar,
+  .analytics-main,
+  .chat-sidebar,
+  .chat-main {
+    padding: 1rem;
+  }
+
+  .chart-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+
+  .chat-bubble {
+    max-width: 100%;
+  }
+
+  .filter-bar {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .filter-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .ethics-visual {
+    padding: 1.1rem;
+  }
+
+  .ethics-orbit {
+    width: min(100%, 18rem);
+  }
+
+  .ethics-orbit-center {
+    width: 5.6rem;
+    height: 5.6rem;
+  }
+
+  .ethics-orbit-pill {
+    padding: 0.35rem 0.6rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+  }
+
+  .cta-section {
+    padding-bottom: 4rem;
+  }
+}
+
+@media (max-width: 680px) {
   .hero-actions,
   .cta-actions {
     flex-direction: column;
@@ -2203,15 +2444,182 @@ button:focus-visible {
   .hero-highlights {
     grid-template-columns: 1fr;
   }
+}
 
-  .use-case-grid,
-  .value-grid,
-  .ethics-principles-grid {
+@media (max-width: 480px) {
+  .section {
+    padding: 3.5rem 0;
+  }
+
+  .site-header {
+    padding: 0.75rem 0;
+  }
+
+  .site-panel {
+    padding: 0.4rem;
+  }
+
+  .site-panel-inner {
+    padding: 0.95rem;
+    border-radius: 1.3rem;
+  }
+
+  .site-panel-close {
+    width: 2.6rem;
+    height: 2.6rem;
+  }
+
+  .brand {
+    align-items: flex-start;
+    gap: 0.7rem;
+  }
+
+  .brand-logo {
+    width: min(16rem, 72vw);
+    max-height: 2.6rem;
+  }
+
+  .brand-eyebrow {
+    font-size: 0.68rem;
+  }
+
+  .brand-title {
+    font-size: 0.92rem;
+    line-height: 1.25;
+  }
+
+  .header-actions,
+  .filter-bar {
     grid-template-columns: 1fr;
   }
 
+  .header-menu-toggle,
+  .header-link {
+    width: 100%;
+  }
+
+  .header-actions {
+    grid-template-areas:
+      "menu"
+      "partner"
+      "link";
+  }
+
+  .header-link {
+    justify-self: stretch;
+  }
+
+  .hero {
+    padding: 4.35rem 0 2.65rem;
+  }
+
+  #workflows.section {
+    padding-top: 2.8rem;
+  }
+
+  .hero .section-label {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.45rem, 14vw, 3.2rem);
+  }
+
+  .hero-copy,
+  .hero-note {
+    font-size: 0.98rem;
+  }
+
+  .hero-actions .button,
+  .cta-actions .button,
+  .accelerator-banner .button {
+    min-height: 3.15rem;
+  }
+
+  .feature-panel,
+  .ethics-panel,
+  .cta-card,
+  .accelerator-banner {
+    gap: 1rem;
+    padding: 1.2rem;
+  }
+
+  .highlight-card,
+  .value-card,
+  .use-case-card,
+  .principle-card,
+  .ethics-card {
+    padding: 1.15rem;
+  }
+
+  .feature-copy h2,
+  .ethics-intro h2,
+  .cta-card h2,
+  .section-heading h2,
+  .split-heading h2,
+  .accelerator-banner h2 {
+    font-size: clamp(1.95rem, 10vw, 2.5rem);
+  }
+
+  .filter-button {
+    padding: 0.75rem 1rem;
+  }
+
+  .analytics-sidebar,
+  .analytics-main,
+  .chat-sidebar,
+  .chat-main {
+    padding: 0.85rem;
+  }
+
+  .sidebar-card,
+  .sidebar-list,
+  .chart-card,
+  .chat-panel {
+    border-radius: 0.95rem;
+  }
+
+  .metric-row article,
+  .chat-panel {
+    padding: 0.8rem;
+  }
+
+  .ethics-visual {
+    padding: 1rem 0.85rem;
+  }
+
   .ethics-orbit {
-    width: min(100%, 18rem);
+    width: min(100%, 16rem);
+  }
+
+  .ethics-orbit-center {
+    width: 4.8rem;
+    height: 4.8rem;
+    font-size: 0.82rem;
+  }
+
+  .ethics-orbit-pill {
+    font-size: 0.64rem;
+  }
+
+  .ethics-trust-strip span {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .footer-socials {
+    width: 100%;
+  }
+
+  .footer-social-link {
+    flex: 1 1 auto;
+    justify-content: center;
+  }
+
+  .footer-meta {
+    gap: 0.5rem;
   }
 }
 
