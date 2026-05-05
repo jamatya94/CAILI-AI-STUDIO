@@ -847,6 +847,10 @@ select {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.ecosystem-grid-faculty {
+  grid-template-columns: 1fr;
+}
+
 .ecosystem-card {
   --ecosystem-glow: rgba(201, 79, 196, 0.14);
   --ecosystem-accent-start: rgba(94, 44, 165, 0.92);
@@ -1285,6 +1289,21 @@ select {
     radial-gradient(circle at 0% 0%, rgba(255, 236, 204, 0.98) 0%, rgba(255, 255, 255, 0) 44%),
     radial-gradient(circle at 100% 100%, rgba(255, 227, 184, 0.6) 0%, rgba(255, 255, 255, 0) 42%),
     linear-gradient(145deg, rgba(255, 252, 245, 0.98), rgba(255, 246, 233, 0.9) 58%, rgba(255, 255, 255, 0.95));
+}
+
+.ecosystem-card-policy {
+  --ecosystem-glow: rgba(255, 224, 174, 0.34);
+  --ecosystem-accent-start: #8f4e16;
+  --ecosystem-accent-end: #e0a343;
+  --ecosystem-title-start: #744117;
+  --ecosystem-title-end: #be7d25;
+  --ecosystem-wash-1: rgba(255, 246, 225, 0.9);
+  --ecosystem-wash-2: rgba(255, 250, 239, 0.82);
+  --ecosystem-badge-start: rgba(255, 246, 225, 0.98);
+  background:
+    radial-gradient(circle at 0% 0%, rgba(255, 241, 213, 0.98) 0%, rgba(255, 255, 255, 0) 44%),
+    radial-gradient(circle at 100% 100%, rgba(255, 214, 145, 0.52) 0%, rgba(255, 255, 255, 0) 42%),
+    linear-gradient(145deg, rgba(255, 253, 247, 0.98), rgba(255, 247, 234, 0.92) 58%, rgba(255, 255, 255, 0.95));
 }
 
 .ecosystem-card-builder {
@@ -2864,6 +2883,10 @@ button:focus-visible {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .ecosystem-grid-faculty {
+    grid-template-columns: 1fr;
+  }
+
   .ecosystem-card-featured {
     grid-template-columns: 1fr;
   }
@@ -3070,6 +3093,7 @@ button:focus-visible {
   .value-grid,
   .principles-grid,
   .ecosystem-grid-mba,
+  .ecosystem-grid-faculty,
   .ethics-support-column,
   .ethics-guidance,
   .metric-row,
